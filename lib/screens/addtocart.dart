@@ -1,5 +1,6 @@
 import 'package:first_app/screens/HomePage.dart';
 import 'package:flutter/material.dart';
+import './confirmation_page.dart';
 
 class AddToCart extends StatelessWidget {
   @override
@@ -23,12 +24,20 @@ class AddToCart extends StatelessWidget {
                   color: Colors.white,
                   fontWeight: FontWeight.bold),
             ),
-            Text(
-              'CheckOut',
-              style: TextStyle(
-                  fontSize: 20,
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (BuildContext ctx) => Confirmation()));
+              },
+              child: Text(
+                'CheckOut',
+                style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20),
+              ),
             ),
           ],
         ),

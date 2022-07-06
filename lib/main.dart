@@ -6,6 +6,7 @@ import 'screens/SignIn.dart';
 import 'screens/SignUp.dart';
 import 'screens/HomePage.dart';
 import 'screens/addtocart.dart';
+import 'screens/confirmation_page.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -33,6 +34,7 @@ class MyApp extends StatelessWidget {
       //home: SignUp(),
       //home: HomePage(),
       //home: AddToCart(),
+      //home: Confirmation(),
     );
   }
 }
