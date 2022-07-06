@@ -131,24 +131,19 @@ class SignIn extends StatelessWidget {
                   'New user? ',
                   style: TextStyle(color: Colors.black, fontSize: 15),
                 ),
-                Container(
-                  height: 50,
-                  width: 110,
-                  child: RaisedButton(
-                    color: Colors.white,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (BuildContext ctx) => SignUp()));
-                    },
-                    child: Text(
-                      'Register now',
-                      style: TextStyle(color: Colors.black, fontSize: 15),
-                    ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (BuildContext ctx) => SignUp()));
+                  },
+                  child: Text(
+                    'Register now',
+                    style: TextStyle(
+                        color: Colors.blue,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 15),
                   ),
                 ),
               ],
