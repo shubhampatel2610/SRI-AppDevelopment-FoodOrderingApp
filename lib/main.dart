@@ -30,9 +30,9 @@ class MyApp extends StatelessWidget {
       //home: welcome(),
       //home: SignIn(),
       //home: SignUp(),
-      //home: HomePage(),
+      home: HomePage(),
       //home: AddToCart(),
-      home: Confirmation(),
+      //home: Confirmation(),
     );
   }
 }

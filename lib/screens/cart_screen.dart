@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
-
+import 'HomePage.dart';
 import 'confirmation_page.dart';
 
-class CartScreen extends StatelessWidget {
+class CartScreen extends StatefulWidget {
   final cart;
-  final TotalPrice;
+  var TotalPrice;
   CartScreen(this.cart, this.TotalPrice);
 
+  @override
+  State<CartScreen> createState() => _CartScreenState();
+}
+
+class _CartScreenState extends State<CartScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +27,7 @@ class CartScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
-              'Total: ' + '$TotalPrice' + ' Rs/-',
+              'Total: ' + '${widget.TotalPrice}' + ' Rs/-',
               style: TextStyle(
                   color: Colors.white,
                   fontSize: 20,
@@ -54,26 +59,49 @@ class CartScreen extends StatelessWidget {
               itemBuilder: (context, index) {
                 return ListTile(
                   title: Text(
-                    cart[index].foodname,
+                    widget.cart[index].foodname,
                     style: TextStyle(
                         color: Colors.black,
                         fontWeight: FontWeight.bold,
                         fontSize: 20),
                   ),
-                  trailing: Text(
-                    '${cart[index].price}' + ' Rs/-',
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20),
+                  trailing: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: <Widget>[
+                      Text(
+                        '${widget.cart[index].price}' + ' Rs/-',
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20),
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      IconButton(
+                        icon: Icon(
+                          Icons.remove_outlined,
+                          size: 20.0,
+                          color: Colors.black,
+                        ),
+                        onPressed: () {
+                          setState(
+                            () {
+                              widget.TotalPrice =
+                                  widget.TotalPrice - widget.cart[index].price;
+                              widget.cart.removeAt(index);
+                            },
+                          );
+                        },
+                      ),
+                    ],
                   ),
-                  onTap: () {},
                 );
               },
               separatorBuilder: (context, index) {
                 return Divider();
               },
-              itemCount: cart.length,
+              itemCount: widget.cart.length,
               shrinkWrap: true,
               primary: false,
             ),
