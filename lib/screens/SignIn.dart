@@ -80,7 +80,7 @@ class SignIn extends StatelessWidget {
                 myTextField(
                   controller: Password,
                   //icon: Icons.lock_outline,
-                  hText: 'Password',
+                  hText: 'Password(must greater than 8 letters)',
                   obsText: true,
                   //iconColor: Colors.white,
                 ),

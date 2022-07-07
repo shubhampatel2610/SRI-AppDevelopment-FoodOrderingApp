@@ -27,10 +27,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter demo',
       theme: ThemeData(),
-      //home: welcome(),
+      home: welcome(),
       //home: SignIn(),
       //home: SignUp(),
-      home: HomePage(),
+      //home: HomePage(),
       //home: AddToCart(),
       //home: Confirmation(),
     );

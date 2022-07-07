@@ -12,14 +12,6 @@ class SignUp extends StatelessWidget {
 
   GlobalKey<ScaffoldState> globalKey = GlobalKey<ScaffoldState>();
 
-  void sendData() {
-    FirebaseFirestore.instance.collection('User Data').add({
-      'username': Username.text,
-      'email id': Email_ID.text,
-      'password': Password.text,
-    });
-  }
-
   void validation() {
     if (Username.text.trim().isEmpty || Username.text.trim() == null) {
       globalKey.currentState!.showSnackBar(
@@ -52,8 +44,6 @@ class SignUp extends StatelessWidget {
         ),
       );
       return;
-    } else {
-      sendData();
     }
   }
 
@@ -113,7 +103,7 @@ class SignUp extends StatelessWidget {
                 myTextField(
                   //icon: Icons.lock_outline,
                   controller: Password,
-                  hText: 'Password',
+                  hText: 'Password(must greater than 8 letters)',
                   obsText: true,
                   //iconColor: Colors.white,
                 ),
