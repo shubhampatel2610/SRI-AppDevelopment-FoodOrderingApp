@@ -4,12 +4,12 @@ class myTextField extends StatelessWidget {
   final String hText;
   final bool obsText;
   final TextEditingController controller;
-  //final Icon icon;
 
-  myTextField(
-      {required this.hText,
-      required bool this.obsText,
-      required this.controller});
+  myTextField({
+    required this.hText,
+    required bool this.obsText,
+    required this.controller,
+  });
 
   @override
   Widget build(BuildContext context) {
