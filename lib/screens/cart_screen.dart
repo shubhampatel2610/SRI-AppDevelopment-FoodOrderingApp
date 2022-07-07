@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'HomePage.dart';
 import 'confirmation_page.dart';
 
 class CartScreen extends StatefulWidget {
