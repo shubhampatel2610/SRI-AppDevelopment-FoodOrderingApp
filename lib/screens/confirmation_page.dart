@@ -7,7 +7,7 @@ class Confirmation extends StatelessWidget {
       body: Column(
         children: [
           SizedBox(
-            height: 120,
+            height: 80,
           ),
           Container(
             child: Text(
@@ -36,9 +36,9 @@ class Confirmation extends StatelessWidget {
           Container(
             child: Center(
               child: Image.asset(
-                'images/wlc_page_logo.png',
-                width: 250,
-                height: 250,
+                'images/confirm.png',
+                width: 50,
+                height: 50,
               ),
             ),
           ),

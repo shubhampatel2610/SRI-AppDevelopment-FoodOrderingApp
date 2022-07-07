@@ -1,11 +1,9 @@
 import 'package:firebase_core/firebase_core.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'screens/welcome.dart';
 import 'screens/SignIn.dart';
 import 'screens/SignUp.dart';
 import 'screens/HomePage.dart';
-import 'screens/addtocart.dart';
 import 'screens/confirmation_page.dart';
 
 Future<void> main() async {
@@ -29,12 +27,12 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter demo',
       theme: ThemeData(),
-      home: welcome(),
+      //home: welcome(),
       //home: SignIn(),
       //home: SignUp(),
       //home: HomePage(),
       //home: AddToCart(),
-      //home: Confirmation(),
+      home: Confirmation(),
     );
   }
 }
