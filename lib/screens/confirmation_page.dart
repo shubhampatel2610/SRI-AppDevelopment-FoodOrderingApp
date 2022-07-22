@@ -36,7 +36,7 @@ class Confirmation extends StatelessWidget {
           Container(
             child: Center(
               child: Image.asset(
-                'images/chef.png',
+                'images/confirm.png',
                 width: 200,
                 height: 200,
               ),
