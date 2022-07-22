@@ -6,18 +6,18 @@ class FoodScreen extends StatelessWidget {
   FoodScreen(this._valueSetter);
 
   List<ProductModel> foods = [
-    ProductModel('Cheese Burger', 100, 'images/burger.png'),
-    ProductModel('Chicken Tanduri', 100, 'images/chicken.png'),
-    ProductModel('Chinese Bhel', 100, 'images/chinese.png'),
-    ProductModel('Cold Drinks', 100, 'images/drinks.png'),
-    ProductModel('Egg Curry', 100, 'images/egg.png'),
-    ProductModel('Gujarati Full Dish', 100, 'images/gujarati.png'),
+    ProductModel('Cheese Burger', 80, 'images/burger.png'),
+    ProductModel('Chicken Tanduri', 250, 'images/chicken.png'),
+    ProductModel('Chinese Bhel', 110, 'images/chinese.png'),
+    ProductModel('Cold Drinks', 50, 'images/drinks.png'),
+    ProductModel('Egg Curry', 140, 'images/egg.png'),
+    ProductModel('Gujarati Full Dish', 145, 'images/gujarati.png'),
     ProductModel('Mocktails', 100, 'images/mocktail.png'),
-    ProductModel('Paneer Tikka', 100, 'images/paneer.png'),
-    ProductModel('Red Chilly Pasta', 100, 'images/pasta.png'),
-    ProductModel('Margherita Pizza', 100, 'images/pizza.png'),
-    ProductModel('Veg Salad', 100, 'images/salad.png'),
-    ProductModel('Masala Dosa', 100, 'images/south_indian.png'),
+    ProductModel('Paneer Tikka', 120, 'images/paneer.png'),
+    ProductModel('Red Chilly Pasta', 175, 'images/pasta.png'),
+    ProductModel('Margherita Pizza', 315, 'images/pizza.png'),
+    ProductModel('Veg Salad', 105, 'images/salad.png'),
+    ProductModel('Masala Dosa', 140, 'images/south_indian.png'),
   ];
 
   @override
