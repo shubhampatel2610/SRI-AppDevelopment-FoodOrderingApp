@@ -26,7 +26,7 @@ class welcome extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Text(
-                      'Welcome to HungrFood',
+                      'Welcome to FoodieVille',
                       style: TextStyle(
                         fontSize: 30,
                         fontWeight: FontWeight.bold,

@@ -146,10 +146,6 @@ class SignUp extends StatelessWidget {
                           ),
                         );
                       });
-
-                      Username.clear();
-                      Email_ID.clear();
-                      Password.clear();
                     },
                     child: Text(
                       'Register',
